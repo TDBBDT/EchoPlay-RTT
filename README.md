@@ -1,5 +1,17 @@
 # EchoPlay · RTT 战术潜行项目
 
+## 团队制作入口（2026-09-21）
+
+- **[21天Game Jam制作包：程序 / 首关 / 3D动画 / 特效 / 2D UI / 排期](design/gamejam-21d/README.md)**
+- **[各工种分支、资源目录与合并操作](CONTRIBUTING.md)**
+- [美术源文件入口](assets/README.md) · [正式UE工程位置约定](game/README.md) · [资源交付模板](production/templates/asset-handoff.md)
+
+分支流程：`work/program`、`work/art-3d`、`work/vfx`、`work/art-2d`、`work/design` → `develop` → `main`。
+工作分支提交小批次PR，使用独立目录减少冲突；共用骨架与主关卡单人维护。旧原型保持原位。
+本次森林关方案与既有概念的差异见制作包首页；下方为原有前期项目说明。
+
+---
+
 > **工作名（TBD）** — 游戏正式名称尚未确定，本仓库暂以玩法类型 RTT 指代项目。
 > 这是一款以「观察 → 暂停编排 → 同时执行」为核心的**即时战术潜行**游戏。
 

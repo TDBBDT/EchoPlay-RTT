@@ -24,3 +24,16 @@ Saved/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Local secrets, DCC backups, Python caches, and packaged deliveries
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+*.tmp
+*.autosave
+PackagedBuilds/
+Releases/

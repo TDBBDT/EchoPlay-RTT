@@ -1,0 +1,40 @@
+# Text stays diffable; binary production assets are stored with Git LFS.
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+
+*.[uU][aA][sS][sS][eE][tT] filter=lfs diff=lfs merge=lfs -text lockable
+*.[uU][mM][aA][pP] filter=lfs diff=lfs merge=lfs -text lockable
+*.[uU][bB][uU][lL][kK] filter=lfs diff=lfs merge=lfs -text
+*.[uU][eE][xX][pP] filter=lfs diff=lfs merge=lfs -text
+*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
+*.[bB][lL][eE][nN][dD] filter=lfs diff=lfs merge=lfs -text lockable
+*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text lockable
+*.[pP][sS][bB] filter=lfs diff=lfs merge=lfs -text lockable
+*.[kK][rR][aA] filter=lfs diff=lfs merge=lfs -text lockable
+*.[cC][lL][iI][pP] filter=lfs diff=lfs merge=lfs -text lockable
+*.[mM][aA][xX] filter=lfs diff=lfs merge=lfs -text lockable
+*.[mM][aA] filter=lfs diff=lfs merge=lfs -text lockable
+*.[mM][bB] filter=lfs diff=lfs merge=lfs -text lockable
+*.[sS][pP][pP] filter=lfs diff=lfs merge=lfs -text lockable
+*.[sS][bB][sS][aA][rR] filter=lfs diff=lfs merge=lfs -text
+*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
+*.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
+*.[dD][dD][sS] filter=lfs diff=lfs merge=lfs -text
+*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
+*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
+*.[mM][pP][33] filter=lfs diff=lfs merge=lfs -text
+*.[fF][lL][aA][cC] filter=lfs diff=lfs merge=lfs -text
+*.[mM][pP][44] filter=lfs diff=lfs merge=lfs -text
+*.[mM][oO][vV] filter=lfs diff=lfs merge=lfs -text
+*.[gG][lL][bB] filter=lfs diff=lfs merge=lfs -text

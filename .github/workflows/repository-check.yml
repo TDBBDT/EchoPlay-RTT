@@ -1,0 +1,23 @@
+name: Repository asset checks
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop, 'work/**']
+
+permissions:
+  contents: read
+
+jobs:
+  repository-check:
+    runs-on: ubuntu-latest
+    env:
+      GIT_LFS_SKIP_SMUDGE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, verified 2026-09-21
+        with:
+          lfs: false
+          persist-credentials: false
+      - name: Check generated files, LFS pointers and blob sizes
+        run: python3 tools/check_repository.py
