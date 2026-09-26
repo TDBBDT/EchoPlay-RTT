@@ -8,6 +8,8 @@ EchoPlay是一支7人团队，正在制作以中国山林为背景的即时战�
 
 **[打开山寺首关图文入口](design/gamejam-21d/levels/mountain-temple/README.md)** · **[阅读完整关卡设计](design/gamejam-21d/levels/mountain-temple/林间无声_山寺首关设计.md)**
 
+**美术新增：[A—F 分区图册](design/gamejam-21d/levels/mountain-temple/分区美术图册/README.md)** — 六张平面／体块／侧面图板与六张场景参考，沿用总纲坐标，附材质、轮廓和跨区接口说明。
+
 ![山寺暗渡整体样貌](design/gamejam-21d/levels/mountain-temple/概念图/03_统一布局全景概念.png)
 
 > 2026-09-26 · 设计提案v2.0。全景为AI辅助制作的美术概念；精确空间、人数和高差以统一坐标图与设计表为准。
@@ -22,6 +24,7 @@ EchoPlay是一支7人团队，正在制作以中国山林为背景的即时战�
 | 空间规则 | 崖下H−3、庭院H0、落石台H+3；水平跳跃与藤蔓升降分开 |
 | 环境交互 | 庭院落石、河岸牛后踢；配套替代解与失败恢复 |
 | 图文交付 | 9张图纸，各含PNG与SVG；整体概念、机制资产概念、完整设计稿、坐标与检查数据 |
+| 分区美术补充 | A—F六张平面／体块／侧面对照板（PNG/SVG）、六张场景参考及可放大的离线图册 |
 | 验证状态 | 59项静态检查通过；实际导航、巡逻时序、镜头与通关体验待UE灰盒验证 |
 
 ![首关教学流程](design/gamejam-21d/levels/mountain-temple/图纸/01_教学流程动线图.png)
