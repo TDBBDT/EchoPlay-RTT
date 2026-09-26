@@ -1,202 +1,101 @@
 # EchoPlay · RTT 战术潜行项目
 
-## 团队制作入口（2026-09-21）
+EchoPlay是一支7人团队，正在制作以中国山林为背景的即时战术潜行游戏。玩家通过观察视野、诱敌、藏尸、环境交互和角色配合推进关卡。
 
-- **[21天Game Jam制作包：程序 / 首关 / 3D动画 / 特效 / 2D UI / 排期](design/gamejam-21d/README.md)**
-- **[各工种分支、资源目录与合并操作](CONTRIBUTING.md)**
-- [美术源文件入口](assets/README.md) · [正式UE工程位置约定](game/README.md) · [资源交付模板](production/templates/asset-handoff.md)
+仓库保存设计文档、制作规范、美术交付约定与UE 5.6技术原型。**当前处于设计与原型验证阶段；图文设计完成不代表关卡已在引擎中实现。**《林间无声》、岚刃、苇音均为制作方案中的工作名。
 
-分支流程：`work/program`、`work/art-3d`、`work/vfx`、`work/art-2d`、`work/design` → `develop` → `main`。
-工作分支提交小批次PR，使用独立目录减少冲突；共用骨架与主关卡单人维护。旧原型保持原位。
-本次森林关方案与既有概念的差异见制作包首页；下方为原有前期项目说明。
+## 最新图文方案：山寺暗渡
 
----
+**[打开山寺首关图文入口](design/gamejam-21d/levels/mountain-temple/README.md)** · **[阅读完整关卡设计](design/gamejam-21d/levels/mountain-temple/林间无声_山寺首关设计.md)**
 
-> **工作名（TBD）** — 游戏正式名称尚未确定，本仓库暂以玩法类型 RTT 指代项目。
-> 这是一款以「观察 → 暂停编排 → 同时执行」为核心的**即时战术潜行**游戏。
+**美术新增：[A—F 分区图册](design/gamejam-21d/levels/mountain-temple/分区美术图册/README.md)** — 六张平面／体块／侧面图板与六张场景参考，沿用总纲坐标，附材质、轮廓和跨区接口说明。
 
----
+![山寺暗渡整体样貌](design/gamejam-21d/levels/mountain-temple/概念图/03_统一布局全景概念.png)
 
-## 这是什么
+> 2026-09-26 · 设计提案v2.0。全景为AI辅助制作的美术概念；精确空间、人数和高差以统一坐标图与设计表为准。
 
-本仓库是 **EchoPlay** 团队 RTT 战术潜行项目的**前期工作区**：设计文档、美术需求、
-技术约定，以及在 Unreal Engine 5.6 中验证核心机制可行性的原型代码。
+本关从岚刃单人潜入开始：完成首杀后，观察被双哨覆盖的大门，沿藤蔓下到崖底，经过同高巨石水平跳跃，再从庭院背后上墙。处理独哨、推落巨石解决谈话组后，从侧门会合苇音，进入双人教学与综合解题。
 
-项目目前处于 **预演（Pre-production / Rehearsal）阶段**，目标不是尽快交付一个
-能玩的成品，而是回答两个问题：
+| 内容 | 本次设计 |
+|---|---|
+| 教学主线 | 首杀 → 下藤与平跳 → 三哨庭院 → 苇音会合 → 三信任务 → 双人撤离 |
+| 敌人配置 | 首敌1名、庭院3名、河岸8名、终段4名，共16名 |
+| 双人目标 | 击杀并搜索3名持信敌人；其余敌人可按所选解法处理或绕开 |
+| 空间规则 | 崖下H−3、庭院H0、落石台H+3；水平跳跃与藤蔓升降分开 |
+| 环境交互 | 庭院落石、河岸牛后踢；配套替代解与失败恢复 |
+| 图文交付 | 9张图纸，各含PNG与SVG；整体概念、机制资产概念、完整设计稿、坐标与检查数据 |
+| 分区美术补充 | A—F六张平面／体块／侧面对照板（PNG/SVG）、六张场景参考及可放大的离线图册 |
+| 验证状态 | 59项静态检查通过；实际导航、巡逻时序、镜头与通关体验待UE灰盒验证 |
 
-1. 这套「观察–暂停–编排–执行」的循环，在中国背景下能不能让人上瘾？
-2. 这支队伍能不能按预想的节奏，把一个想法推到可玩？
+![首关教学流程](design/gamejam-21d/levels/mountain-temple/图纸/01_教学流程动线图.png)
 
-因此仓库里的内容是「正在发生」的：文档会改，原型会被推倒重来，结论也可能是
-「这条路走不通」。我们把这些过程都留在版本历史里。
+本提案预计首次游玩22—30分钟，扩展了原制作包“7敌、单文书、10—15分钟”的首关范围。两版关系与工期调整见[首关入口的版本说明](design/gamejam-21d/levels/mountain-temple/README.md#版本与执行口径)。
 
----
+## 按工作内容进入
 
-## 比赛背景
+| 要做什么 | 入口 |
+|---|---|
+| 看最新关卡流程、点位、视锥与高差 | [山寺首关图文目录](design/gamejam-21d/levels/mountain-temple/README.md) |
+| 查角色技能、视野、敌人身份与操作规则 | [01程序执行策划](design/gamejam-21d/01_程序执行策划.md) → [07程序补充](design/gamejam-21d/07_程序补充_视野警戒与敌人身份.md) |
+| 按工种领取制作任务 | [21天Game Jam制作包](design/gamejam-21d/README.md) |
+| 提交资源、选分支或合并 | [团队提交指南](CONTRIBUTING.md) |
+| 交美术源文件与引擎资源 | [美术入口](assets/README.md) · [资源交付模板](production/templates/asset-handoff.md) |
+| 建立正式UE工程 | [game目录约定](game/README.md) |
+| 阅读早期设计与技术验证 | [原始游戏概念](design/gdd/game-concept.md) · [决战时刻原型](prototypes/showdown-mode-concept/README.md) |
+| 查引擎版本和技术规范 | [UE版本参考](docs/engine-reference/unreal/VERSION.md) · [项目约定](CLAUDE.md) |
 
-本项目是 **TapTap 聚光灯游戏创作挑战** 与 **MoBius Game Jam** 的一次**项目预演**。
+## 团队与分支
 
-在正式参赛之前，我们希望先用一段完整的前期开发流程 —— 玩法概念 → 技术验证 →
-可玩原型 —— 跑通团队协作，摸清我们的产能边界、引擎风险与决策节奏。
-这次预演产出的全部设计文档、技术结论与原型代码都在这个仓库里。
+| 分支 | 负责工作 | 主要目录 |
+|---|---|---|
+| `work/design` | 玩法／关卡策划、文案、设计交付 | `design/`、`production/`、主关卡 |
+| `work/program` | 程序、技术策划、系统与原型 | `game/`、`prototypes/` |
+| `work/art-3d` | 3D场景、角色、动画 | `assets/source/3d/` |
+| `work/art-2d` | 2D美术、UI | `assets/source/2d/` |
+| `work/vfx` | 特效与战术反馈 | `assets/source/vfx/` |
+| `develop` | 跨工种集成与试玩 | 合并通过审核的工作分支 |
+| `main` | 队长维护的稳定快照 | 接收经集成验收的develop |
 
----
-
-## 团队：EchoPlay
-
-一支 7 人小队，策划、程序、美术全栈覆盖，从概念到原型在同一条流水线上。
-
-| 岗位 | 分工 |
-|------|------|
-| **技术策划** | 系统设计、技术方案选型、引擎能力验证 |
-| **程序** | 客户端与引擎开发、核心系统实现、工具链与构建 |
-| **玩法 / 关卡策划（队长）** | 核心循环与关卡设计、玩法验证、进度把控 |
-| **文案策划** | 世界观与人物设定、任务文本、叙事包装 |
-| **特效** | 技能与打击反馈、战术可视化表现 |
-| **3D 美术** | 场景与角色资产、模型与材质 |
-| **2D 美术 / UI** | 界面与图标、战术 UI 信息层级、宣传物料 |
-
-> 我们是一支「策划先想清楚、程序先证明能跑、美术再做漂亮」的队伍。
-> 预演阶段刻意保持小规模与短决策链 —— 谁的问题谁拍板，一天内出结论。
-
----
-
-## 玩法一句话
-
-> 你不是一个莽夫，而是一个**棋手**。战场上每一个敌人、每一段巡逻路线、
-> 每一处阴影都是棋盘上的变量。
-
-玩家操控一支各怀绝技的小队潜行渗透，在敌人视野与巡逻的缝隙里规划路线，
-用**信息优势**和**执行精度**以少胜多。战斗靠的是脑子，不是手速。
-
-### 核心循环（约 30 秒）
-
-```
-观察视野锥 → 暂停布置指令 → 恢复时间同时执行 → 处理尸体 → 推进
-```
-
-- **视野锥实时可见** —— 信息完全对称，没有隐藏机制，失败必须能归因
-- **暂停即思考** —— 时间冻结，玩家编排多个角色的一串指令
-- **同时执行** —— 恢复时间的瞬间，精心编排的动作同时展开，这是标志性手感
-- **清场不是结束** —— 尸体能不能藏住，才是持续的压力来源
-
-### 设计支柱
-
-| 支柱 | 含义 |
-|------|------|
-| **精密编排** | 每一次清场都应该像一首指挥好的乐曲，而不是一场混战 |
-| **角色即工具箱** | 每个角色都是不可替代的工具，队伍组合决定可能性空间 |
-| **关卡即谜题** | 每关都有多条解法，但每条都需要思考，没有无脑路线 |
-
-### 我们不做的事
-
-同样重要的是边界：**不做随机生成关卡**、**不做实时动作战斗**、
-**不做复杂叙事系统**、**不做开放世界**、**不做多人联机**、
-**不做技能树与数值成长**。
-
-每一个「不做」都对应着一条会被破坏的支柱 —— 权力应该来自玩家理解，
-而不是角色等级或反应速度。
-
----
-
-## 当前进展
-
-### ✅ 已完成
-
-- **游戏概念文档 v1.0** —— 核心身份、支柱与反支柱、核心循环、MDA 分析、
-  视觉身份锚点、机制清单、MVP 范围与风险评估
-- **MVP 美术需求清单** —— 资产范围与优先级
-- **技术约定** —— 命名规范、性能预算、资产前缀、测试策略
-- **UE 5.6 引擎参考** —— 版本风险、已知破坏性变更与最佳实践
-
-### 🚧 进行中：核心机制可行性原型
-
-`prototypes/showdown-mode-concept/` 是一个**丢弃型原型**，只回答一个问题：
-
-> UE 5.6 能否实现「暂停编排、恢复后帧精确按序执行」的战术时间系统？
-
-选择它作为第一个验证目标，是因为它是整个项目**唯一没有成熟引擎参考方案**的
-高风险系统 —— 它做不出来，后面的一切都没有意义。
-
-原型零二进制资产依赖：全部场景由 GameMode 在运行时生成，全部画面用调试绘制，
-不需要蓝图、不需要导入资源，打开空关卡就能跑。
-
-**已经得到的关键结论：** 单靠 `CustomTimeDilation = 0` **不足以**冻结世界 ——
-它只能停住读取 `DeltaTime` 的逻辑，而视野检测这类纯几何运算仍然会继续运行，
-必须显式门控。这条结论会直接带进正式设计。
-
----
+协作顺序：**工作分支 → PR到develop → 集成试玩 → main**。本次山寺图文归属`work/design`；概念图放在设计目录，正式可导入的美术资产仍按各工种源文件规范交付。主地图与共用骨架由指定负责人维护，详细规则见[CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 仓库结构
 
+```text
+design/
+├── gamejam-21d/                   # 00—07制作文档与旧版离线手册
+│   └── levels/mountain-temple/    # 山寺首关：设计稿、9张图纸、概念图与坐标
+├── gdd/                          # 早期游戏概念
+└── art/                          # 早期MVP美术需求
+assets/                          # 分工种美术源文件
+game/                            # 正式UE工程位置约定
+prototypes/showdown-mode-concept/ # 决战时刻可行性原型
+docs/engine-reference/unreal/     # UE版本、风险与参考
+production/                      # 排期、资源交付、认领与会话记录
+tools/check_repository.py         # 仓库文件与LFS检查
 ```
-.
-├── CLAUDE.md                          # 项目速览与协作约定
-├── design/
-│   ├── gdd/game-concept.md            # 游戏概念文档 v1.0
-│   └── art/mvp-asset-requirements.md  # MVP 美术资产需求
-├── docs/
-│   └── engine-reference/unreal/       # UE 5.6 版本、破坏性变更与最佳实践
-├── production/
-│   └── session-state/active.md        # 当前工作会话状态
-├── prototypes/
-│   └── showdown-mode-concept/         # 战术时间系统可行性原型（UE 5.6 / C++）
-└── .claude/docs/technical-preferences.md
+
+## 获取图片与离线阅读
+
+GitHub中直接阅读Markdown，图纸使用PNG预览，另有SVG供无损放大。图片遵循仓库的Git LFS规则：
+
+```bash
+git lfs install
+git clone --branch work/design https://github.com/TDBBDT/EchoPlay-RTT.git
+cd EchoPlay-RTT
+git lfs pull
 ```
 
----
+本地打开`design/gamejam-21d/levels/mountain-temple/山寺首关设计.html`即可查看带目录、图片缩放的离线图文版。HTML需和同目录的`图纸/`、`概念图/`保持在一起；GitHub文件页不会直接运行HTML。图片逐文件提交，便于版本比较，不把重复ZIP塞入仓库。
 
-## 技术栈
+## 技术与当前阶段
 
-| 项目 | 选择 |
-|------|------|
-| **引擎** | Unreal Engine 5.6 |
-| **语言** | Blueprint（主力：玩法、关卡脚本、AI 行为）<br>C++（关键路径：视野判定、战术时间系统、巡逻 AI） |
-| **构建** | Unreal Build Tool |
-| **目标平台** | PC / Steam |
-| **性能目标** | 60 fps（16.6 ms 帧预算） |
-| **输入** | 键鼠为主，手柄做到「可玩」 |
+- 引擎：Unreal Engine 5.6；Blueprint承担主要玩法与关卡脚本，C++处理关键系统；面向PC，目标60fps。
+- 现有`showdown-mode-concept`是战术时间系统验证原型。其记录指出仅设置`CustomTimeDilation = 0`不足以冻结全部几何检测，需要显式门控；新关卡并未因此获得UE运行验证。
+- 早期GDD强调暂停编排；21天方案将同步规划列为可选。山寺首关的推荐解均允许实时切人完成，原型继续保留用于技术验证。
+- 下一步按设计稿搭建灰盒，优先验证大门封锁、藤蔓与跳点、八敌巡逻网和双人撤离，再接入精修美术。
 
----
+## 项目背景与参考
 
-## 下一步
+项目是EchoPlay团队面向TapTap聚光灯游戏创作挑战与MoBius Game Jam的前期预演，工作内容以中文维护。旧概念、旧首关和技术原型保留在各自目录，供追溯比较。
 
-1. 完成战术时间系统的原型试玩验证，输出结论（继续 / 转向 / 终止）
-2. 若核心机制成立 → 确认视觉身份，进入 MVP 开发
-3. 若核心机制不成立 → 回到概念阶段，重新评估方向
-
-MVP 的目标不是「做一个能玩的游戏」，而是**验证核心循环是否好玩**：
-测试者失败后会不会主动再试一次、会不会为了规划而停下来思考、
-会不会主动使用时间暂停机制。
-
----
-
-## 关于本项目的说明
-
-- 本仓库当前内容以**中文**为主。
-- 原型目录下的代码是**验证性代码**，明确不作为正式实现的基础，会被重写。
-- 项目设计参考了成熟 RTT 作品（如 *Desperados III*）的系统框架，
-  方法论是「先复刻成熟系统，再做极少量微创新」—— 我们不想把预算花在
-  赌一个未经市场验证的自创机制上。
-
----
-
-<details>
-<summary><b>English (brief)</b></summary>
-
-**EchoPlay — RTT Tactical Stealth Project (working title)**
-
-We are a 7-person team building a real-time tactics stealth game in Unreal Engine 5.6.
-The core loop is *observe → pause and plan → execute simultaneously*: you command a
-small squad of specialists, and success comes from information advantage and
-execution precision rather than reflexes.
-
-This repository is a **rehearsal run** for the **TapTap Spotlight Game Creation
-Challenge** and the **MoBius Game Jam** — a full pre-production pass (concept →
-technical validation → playable prototype) taken before we enter the competitions
-proper. It currently holds our design documentation, technical conventions, and a
-throwaway Unreal prototype validating the highest-risk system: frame-accurate
-time-stop command execution.
-
-</details>
+山寺方案参考《影子战术：将军之刃》《赏金奇兵3》的公开开发材料，关注清晰反馈、可观察的战术区域、推荐路线与多解验证。具体来源、采用方式与本项目改编边界见[完整设计稿](design/gamejam-21d/levels/mountain-temple/林间无声_山寺首关设计.md)。

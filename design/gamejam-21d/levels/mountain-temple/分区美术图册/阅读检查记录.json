@@ -1,0 +1,62 @@
+{
+  "images": [
+    {
+      "src": "图板/A_林径首杀_平面与侧面.png",
+      "loaded": true
+    },
+    {
+      "src": "场景参考/A_林径首杀_场景参考.png",
+      "loaded": true
+    },
+    {
+      "src": "图板/B_崖下绕行_平面与侧面.png",
+      "loaded": true
+    },
+    {
+      "src": "场景参考/B_崖下绕行_场景参考.png",
+      "loaded": true
+    },
+    {
+      "src": "图板/C_山寺庭院_平面与侧面.png",
+      "loaded": true
+    },
+    {
+      "src": "场景参考/C_山寺庭院_场景参考.png",
+      "loaded": true
+    },
+    {
+      "src": "图板/D_河岸补给院_平面与侧面.png",
+      "loaded": true
+    },
+    {
+      "src": "场景参考/D_河岸补给院_场景参考.png",
+      "loaded": true
+    },
+    {
+      "src": "图板/E_岩后整装_平面与侧面.png",
+      "loaded": true
+    },
+    {
+      "src": "场景参考/E_岩后整装_场景参考.png",
+      "loaded": true
+    },
+    {
+      "src": "图板/F_出山联防岗_平面与侧面.png",
+      "loaded": true
+    },
+    {
+      "src": "场景参考/F_出山联防岗_场景参考.png",
+      "loaded": true
+    }
+  ],
+  "desktop": {
+    "width": 1600,
+    "scroll": 1600
+  },
+  "mobile": {
+    "width": 390,
+    "scroll": 390
+  },
+  "zoom": true,
+  "errors": []
+}

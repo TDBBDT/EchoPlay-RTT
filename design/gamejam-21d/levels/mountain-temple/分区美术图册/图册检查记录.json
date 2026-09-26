@@ -1,0 +1,73 @@
+{
+  "scope": "原坐标不变、图板守卫编号、图片解码与相对链接；不等于引擎验证",
+  "passed": 16,
+  "total": 16,
+  "local_links": 39,
+  "checks": [
+    {
+      "name": "source_coordinates_unchanged",
+      "pass": true
+    },
+    {
+      "name": "canonical_coordinate_hash",
+      "pass": true
+    },
+    {
+      "name": "A_guard_labels_match_baseline",
+      "pass": true
+    },
+    {
+      "name": "A_png_pair_present",
+      "pass": true
+    },
+    {
+      "name": "B_guard_labels_match_baseline",
+      "pass": true
+    },
+    {
+      "name": "B_png_pair_present",
+      "pass": true
+    },
+    {
+      "name": "C_guard_labels_match_baseline",
+      "pass": true
+    },
+    {
+      "name": "C_png_pair_present",
+      "pass": true
+    },
+    {
+      "name": "D_guard_labels_match_baseline",
+      "pass": true
+    },
+    {
+      "name": "D_png_pair_present",
+      "pass": true
+    },
+    {
+      "name": "E_guard_labels_match_baseline",
+      "pass": true
+    },
+    {
+      "name": "E_png_pair_present",
+      "pass": true
+    },
+    {
+      "name": "F_guard_labels_match_baseline",
+      "pass": true
+    },
+    {
+      "name": "F_png_pair_present",
+      "pass": true
+    },
+    {
+      "name": "twelve_images_decode",
+      "pass": true
+    },
+    {
+      "name": "relative_links_resolve",
+      "pass": true
+    }
+  ],
+  "broken_links": []
+}
