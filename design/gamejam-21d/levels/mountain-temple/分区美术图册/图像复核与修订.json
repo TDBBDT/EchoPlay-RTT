@@ -1,0 +1,62 @@
+{
+  "mode": "内置 ImageGen，未使用 CLI 或外部 API 密钥",
+  "reviews": [
+    {
+      "zone": "A",
+      "result": "保留两块主岩、三处灌木、单守卫和东北出口；植被只作样貌参考。"
+    },
+    {
+      "zone": "B",
+      "result": "确认四块石顶同高、左右藤蔓与上方拱桥；将正门改为关闭的可透视栅门。"
+    },
+    {
+      "zone": "C",
+      "result": "修正照壁与落石左右关系，使石槽朝向交谈组；补关闭栅门，石槽改为连续坡面。人物精确朝向仍以图板与总纲为准。"
+    },
+    {
+      "zone": "D",
+      "result": "确认八名守卫、头向水的牛与西侧干岸；移除生成器擅自添加的码头和船。"
+    },
+    {
+      "zone": "E",
+      "result": "保留两名主角的空地停留、南来北出及北侧西折；无敌人或新增机关。"
+    },
+    {
+      "zone": "F",
+      "result": "弃用多画敌人且墙体偏位的初稿；根据纯平面重新生成无人物环境图。八处墙体与L墙关系保留，删除两处多余石桩并补同高跳缝。精确缝宽与锚点以图板为准。"
+    }
+  ],
+  "limits": "场景参考是AI辅助美术概念，不能逐像素还原米制投影；所有可量测位置以同源图板与原坐标JSON为准。图册不声称完成引擎验证。",
+  "edits": [
+    {
+      "zone": "C",
+      "purpose": "第一轮纠正落石和照壁的关系",
+      "prompt": "Use case: precise-object-edit. Correct the gameplay placement in image1, preserving camera, style, temple walls, west repair opening and east side doorway. Image2 is the AUTHORITATIVE plan. Change ONLY these three items: (1) The freestanding thin stone screen currently in the CENTER of the courtyard must move clearly to the LEFT of center, immediately to the RIGHT of the lone left guard, so it separates the lone guard from the two right guards. Keep its north-south orientation. (2) Move the boulder and its whole supported chute on the north terrace clearly RIGHT of center, over the two right guards. Its landing zone must be clear ground on the right side of the screen. It must NOT point at or hit the screen. (3) Reposition the two talking guards together around the bottom of this right-of-center chute, one just southwest of the chute landing and the other just northeast; both within one boulder-sized hit circle. Keep exactly THREE guards total, lone left guard unchanged. Match plan: screen centerx10.5; loneguardx8; boulderchutex17; pairx16 and18. Place the stone chute END in the same courtyard ground patch between the two talking guards, not above empty space. Keep entire north terraceH+3, courtyardH0, separate left vine access, no stairs. No additional objects, no text, no arrows. Do not modify any other architecture."
+    },
+    {
+      "zone": "B",
+      "purpose": "局部机制与布局修订",
+      "prompt": "Use case: precise-object-edit. Change ONLY the large temple gateway at top center: install CLOSED see-through wooden lattice gate leaves across the opening, with a visible timber latch. Keep gaps between vertical lattice bars so one can see into the courtyard. Do not make it a solid opaque door. Preserve all other image pixels and composition as much as possible, especially exactly FOUR rock pillar flat tops at same elevation, arch clearance, both vines, side shelf and mountain style. No people, no text."
+    },
+    {
+      "zone": "C",
+      "purpose": "局部机制与布局修订",
+      "prompt": "Use case: precise-object-edit. Preserve all architecture, positions, camera, EXACTLY THREE guards and the corrected boulder-over-pair arrangement. Change ONLY two small mechanism details: 1) the large front/south gateway must contain CLOSED see-through wooden lattice gate leaves with a latch, not an empty open doorway and not an opaque solid door. 2) The sloping stone channel beneath the boulder must be a SMOOTH CONTINUOUS concave stone CHUTE with side curbs, no horizontal stair treads or risers and no climbable staircase. Boulder rolls down it toward the two guards below. Keep the boulder position and its slope endpoints unchanged. No extra objects, no labels."
+    },
+    {
+      "zone": "D",
+      "purpose": "局部机制与布局修订",
+      "prompt": "Use case: precise-object-edit. Change ONLY the unplanned small wooden jetty and boat along the middle-right river edge: REMOVE the short dock, its posts and boat entirely, replace with continuous reeds, rocks and water matching the surrounding shore. Do not add a bridge, path or stairs into the water. Preserve every guard (exactly8), every existing stone screen, all bushes, the ox facing east/water, dry kick bank, entry southwest and exit northeast, camera and painterly style unchanged."
+    },
+    {
+      "zone": "F",
+      "purpose": "从纯平面重新生成环境图",
+      "prompt": "Use case: sketch-to-render. Paint a polished Chinese mountain checkpoint ENVIRONMENT ART FLOOR PLAN directly over this supplied authoritative floor plan. Use exact TOP DOWN ORTHOGRAPHIC camera: NOT a perspective view. Keep every DARK GREEN RECTANGLE at EXACTLY the same screen position, proportion and orientation. All 8 rectangles are standing-height mossy stone walls:2 touching rectangles make the small L wall in LOWER CENTER, one long horizontal wall MID LEFT, three separated vertical screens MID RIGHT, one horizontal wall UPPER RIGHT, one horizontal wall LOWER LEFT. Do not invent, delete, move, join or enlarge these obstacles. The empty ground is one flatH0 ground surface with worn stone and dirt. Mossy foliage patches preserve light green oval positions; no plants across the narrow gold horizontal jump marker. At that marker, render a narrow north-south slit between EQUAL HEIGHT stone lips, with ground walk-around beyond slit ends. Replace chart-paper texture with rich readable painterly semi-realistic mossy stone, aged muted tan paving, sparse grass, same palette as Chinese mountain monastery game. REMOVE all text, arrows, colored markers, axis ticks, grid and ALL PEOPLE; this is an environment-only plate, guards will be overlaid from a separate technical plan. Keep north up, east right. Broad open access at bottom left and top right. Thin mountainside border outside rectangular game area only, no extra interior rock masses, no building, no stair, no perimeter wall, no decorative bridge. Most important: preserve exact 8 dark rectangle footprints and same empty spaces, no reinterpretation of layout."
+    },
+    {
+      "zone": "F",
+      "purpose": "去掉多余石桩并补J4跳缝",
+      "prompt": "Use case: precise-object-edit. Preserve this exact top-down environment floor plan, all EIGHT main stone wall rectangles, all ground heights and the two corner accesses. Make ONLY TWO LOCAL corrections. 1) Remove the TWO tiny freestanding parallel stone stubs near the center of the image, at roughly62% width and53% height, immediately below the bottom end of the tall middle vertical screen. Fill their small footprints with the same flat paving, leaving the path completely open. These are unwanted extras. Do NOT remove or shorten the tall screen itself. 2) The optional jump slit belongs in the UPPER CENTER, not at those stubs: remove the small bush centered near55% width,28% height and replace that tiny patch with a narrow dark north-south ground fissure, approximately x55.8%..58.1% of image width and y27.4%..34.7% of image height. Flat stone ground lips on BOTH sides at identical elevation, no stairs or raised walls. The fissure is about0.8m wide and2m long, with clear walk-around at both north and south ends. It is to the LEFT of the tall middle vertical wall and below-left of the upper-right thin vertical screen. Preserve all other bushes and everything else. No people, text, labels, arrows, extra props."
+    }
+  ]
+}

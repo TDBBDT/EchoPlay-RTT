@@ -1,0 +1,473 @@
+{
+  "scope": "静态坐标、距离、有限视角边界检查；不等同引擎可玩验证",
+  "checks": [
+    {
+      "name": "gate_near_distance_m",
+      "value": 4.47213595499958,
+      "pass": true,
+      "meaning": "C01/C02至门闩，同为近视野"
+    },
+    {
+      "name": "gate_confirm_s",
+      "value": 0.5590169943749475,
+      "pass": true,
+      "meaning": "确认早于抬闩完成；前提为持续看见"
+    },
+    {
+      "name": "gate_sweep_margin_deg",
+      "value": 25,
+      "pass": true,
+      "meaning": "±10°扫视时门闩仍在半角35°以内"
+    },
+    {
+      "name": "one_stone_cannot_cover_two_sentries",
+      "value": 8,
+      "pass": true,
+      "meaning": "两哨8m大于石声圆直径7m"
+    },
+    {
+      "name": "rock_C02",
+      "value": 1.4142135623730951,
+      "pass": true,
+      "meaning": "目标中心落在R01命中区"
+    },
+    {
+      "name": "rock_C03",
+      "value": 1.4142135623730951,
+      "pass": true,
+      "meaning": "目标中心落在R01命中区"
+    },
+    {
+      "name": "S1_D01",
+      "value": 4.47213595499958,
+      "pass": true,
+      "meaning": "距离阈值8m；应在范围内"
+    },
+    {
+      "name": "S1_D02",
+      "value": 11.704699910719626,
+      "pass": true,
+      "meaning": "距离阈值8m；应在范围外"
+    },
+    {
+      "name": "S2_D02",
+      "value": 7.615773105863909,
+      "pass": true,
+      "meaning": "距离阈值8m；应在范围内"
+    },
+    {
+      "name": "T2_D02",
+      "value": 5.4387130830739725,
+      "pass": true,
+      "meaning": "距离阈值5m；应在范围外"
+    },
+    {
+      "name": "cow_throw",
+      "value": 5.408326913195984,
+      "pass": true,
+      "meaning": "距离阈值6m；应在范围内"
+    },
+    {
+      "name": "cow_body_D05",
+      "value": 10.44030650891055,
+      "pass": true,
+      "meaning": "距离阈值10m；应在范围外"
+    },
+    {
+      "name": "D06_stone_sound",
+      "value": 3.440930106817051,
+      "pass": true,
+      "meaning": "距离阈值3.5m；应在范围内"
+    },
+    {
+      "name": "S3_F02",
+      "value": 6.4031242374328485,
+      "pass": true,
+      "meaning": "距离阈值8m；应在范围内"
+    },
+    {
+      "name": "S3_F01",
+      "value": 11.180339887498949,
+      "pass": true,
+      "meaning": "距离阈值8m；应在范围外"
+    },
+    {
+      "name": "S4_F04",
+      "value": 7.280109889280519,
+      "pass": true,
+      "meaning": "距离阈值8m；应在范围内"
+    },
+    {
+      "name": "F03_dart",
+      "value": 3.2015621187164243,
+      "pass": true,
+      "meaning": "距离阈值6m；应在范围内"
+    },
+    {
+      "name": "F03_hit_sound_F04",
+      "value": 5.385164807134505,
+      "pass": true,
+      "meaning": "距离阈值3m；应在范围外"
+    },
+    {
+      "name": "J1_flat",
+      "value": 0,
+      "pass": true,
+      "meaning": "起落面绝对同高"
+    },
+    {
+      "name": "J1_span",
+      "value": 1.2000000000000028,
+      "pass": true,
+      "meaning": "成对锚点间距≤1.5m"
+    },
+    {
+      "name": "J2_flat",
+      "value": 0,
+      "pass": true,
+      "meaning": "起落面绝对同高"
+    },
+    {
+      "name": "J2_span",
+      "value": 1.4000000000000004,
+      "pass": true,
+      "meaning": "成对锚点间距≤1.5m"
+    },
+    {
+      "name": "J3_flat",
+      "value": 0,
+      "pass": true,
+      "meaning": "起落面绝对同高"
+    },
+    {
+      "name": "J3_span",
+      "value": 1.5,
+      "pass": true,
+      "meaning": "成对锚点间距≤1.5m"
+    },
+    {
+      "name": "J4_flat",
+      "value": 0,
+      "pass": true,
+      "meaning": "起落面绝对同高"
+    },
+    {
+      "name": "J4_span",
+      "value": 1.5,
+      "pass": true,
+      "meaning": "成对锚点间距≤1.5m"
+    },
+    {
+      "name": "V1_vertical",
+      "value": [
+        [
+          20,
+          2,
+          0
+        ],
+        [
+          20,
+          2,
+          -3
+        ]
+      ],
+      "pass": true,
+      "meaning": "纯竖向藤蔓，不混用斜跳"
+    },
+    {
+      "name": "V2_vertical",
+      "value": [
+        [
+          1.2,
+          10,
+          -3
+        ],
+        [
+          1.2,
+          10,
+          0
+        ]
+      ],
+      "pass": true,
+      "meaning": "纯竖向藤蔓，不混用斜跳"
+    },
+    {
+      "name": "V3_vertical",
+      "value": [
+        [
+          6,
+          14,
+          0
+        ],
+        [
+          6,
+          14,
+          3
+        ]
+      ],
+      "pass": true,
+      "meaning": "纯竖向藤蔓，不混用斜跳"
+    },
+    {
+      "name": "enemy_count",
+      "value": 16,
+      "pass": true,
+      "meaning": "首敌1+庭院3+河岸8+终段4"
+    },
+    {
+      "name": "letter_count",
+      "value": 3,
+      "pass": true,
+      "meaning": "三名不同带信目标"
+    },
+    {
+      "name": "A01_transform",
+      "value": [
+        17,
+        -18,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "C01_transform",
+      "value": [
+        8,
+        8,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "C02_transform",
+      "value": [
+        16,
+        8,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "C03_transform",
+      "value": [
+        18,
+        10,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D01_transform",
+      "value": [
+        48,
+        -8,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D02_transform",
+      "value": [
+        55,
+        -6,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D03_transform",
+      "value": [
+        62,
+        0,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D04_transform",
+      "value": [
+        69,
+        -3,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D05_transform",
+      "value": [
+        76,
+        8,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D06_transform",
+      "value": [
+        63,
+        12,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D07_transform",
+      "value": [
+        71,
+        12,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "D08_transform",
+      "value": [
+        56,
+        8,
+        -2
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "F01_transform",
+      "value": [
+        50,
+        46,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "F02_transform",
+      "value": [
+        56,
+        46,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "F03_transform",
+      "value": [
+        60,
+        52,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "F04_transform",
+      "value": [
+        65,
+        54,
+        0
+      ],
+      "pass": true,
+      "meaning": "局部与世界位置保持同一方向及比例"
+    },
+    {
+      "name": "C_D_connector_end",
+      "value": [
+        42,
+        -13,
+        -2
+      ],
+      "pass": true,
+      "meaning": "连接精确落在D局部(2,2)入口"
+    },
+    {
+      "name": "E_F_connector_end",
+      "value": [
+        42,
+        38,
+        0
+      ],
+      "pass": true,
+      "meaning": "连接精确落在F局部(2,2)入口"
+    },
+    {
+      "name": "D03_patrol_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "D04_patrol_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "D08_patrol_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "D_letter_C_approach_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "D_B_stone_approach_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "F03_patrol_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "F02_lure_route_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "F_east_route_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "F_west_route_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    },
+    {
+      "name": "C_side_exit_wall_clearance",
+      "value": [],
+      "pass": true,
+      "meaning": "沿线每0.025m采样，角色半径0.3m，不与已绘制硬墙相交；不验证动态视野"
+    }
+  ],
+  "passed": 59,
+  "total": 59,
+  "pending": [
+    "NavMesh路径和陷阱触发",
+    "含碰撞半径的走廊可达性",
+    "敌人完整扫视及巡逻状态机",
+    "输入动画延迟与切人窗口",
+    "相机遮挡和新手盲测"
+  ]
+}

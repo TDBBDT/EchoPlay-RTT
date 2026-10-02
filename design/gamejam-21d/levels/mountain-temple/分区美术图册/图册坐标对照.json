@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "source": "../空间坐标基准.json",
+  "canonical_json_sha256": "5ca05ccbbdc4e63d97935fc9defb21d542f9533291330b242e61865ae9246077",
+  "hash_method": "UTF-8 json.dumps(ensure_ascii=False, sort_keys=True, separators=(comma,colon)); ignores formatting and line endings",
+  "unchanged": [
+    "zones",
+    "walls_local",
+    "connectors_global",
+    "vines_global",
+    "jumps_global",
+    "jump_rocks_global",
+    "enemies"
+  ],
+  "new_art_suggestions": [
+    "北侧正殿背景体量：C局部(4,19)至(22,22)，不新增室内或导航",
+    "墙高1.8m与人物高1.75m仅为比例示意",
+    "材质与不侵占通路的外围植物",
+    "V1上沿支撑、V2维修口承托、B沿崖步道体量均是对既有路线的美术体块解释，不能新增捷径"
+  ],
+  "boards": [
+    {
+      "zone": "A",
+      "file": "图板/A_林径首杀_平面与侧面.svg",
+      "plan_bounds": [
+        0,
+        0,
+        24,
+        18
+      ],
+      "enemy_count": 1
+    },
+    {
+      "zone": "B",
+      "file": "图板/B_崖下绕行_平面与侧面.svg",
+      "plan_bounds": [
+        -2,
+        -2,
+        30,
+        15
+      ],
+      "enemy_count": 0
+    },
+    {
+      "zone": "C",
+      "file": "图板/C_山寺庭院_平面与侧面.svg",
+      "plan_bounds": [
+        -2,
+        -2,
+        34,
+        26
+      ],
+      "enemy_count": 3
+    },
+    {
+      "zone": "D",
+      "file": "图板/D_河岸补给院_平面与侧面.svg",
+      "plan_bounds": [
+        0,
+        0,
+        42,
+        34
+      ],
+      "enemy_count": 8
+    },
+    {
+      "zone": "E",
+      "file": "图板/E_岩后整装_平面与侧面.svg",
+      "plan_bounds": [
+        0,
+        0,
+        10,
+        8
+      ],
+      "enemy_count": 0
+    },
+    {
+      "zone": "F",
+      "file": "图板/F_出山联防岗_平面与侧面.svg",
+      "plan_bounds": [
+        0,
+        0,
+        32,
+        26
+      ],
+      "enemy_count": 4
+    }
+  ],
+  "validation": {
+    "coordinate_source_read_only": true,
+    "enemy_count": 16,
+    "engine_tested": false
+  }
+}
